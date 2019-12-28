@@ -13,31 +13,41 @@ public class FizzBuzzTest {
 
     @org.junit.Test
     public void test0() {
-        Assert.assertEquals("FizzBuzz", FizzBuzz.isFizzBuzz(15, 3, 5));
+        Assert.assertEquals("FizzBuzzWhizz", FizzBuzz.isFizzBuzz(15, 3, 5,7));
     }
 
     @org.junit.Test
     public void test1() {
-        Assert.assertEquals("Fizz", FizzBuzz.isFizzBuzz(3, 3, 5));
+        Assert.assertEquals("FizzBuzz", FizzBuzz.isFizzBuzz(3, 3, 5, 7));
     }
 
     @org.junit.Test
     public void test2() {
-        Assert.assertEquals("Buzz", FizzBuzz.isFizzBuzz(5, 3, 5));
+        Assert.assertEquals("FizzWhizz", FizzBuzz.isFizzBuzz(5, 3, 5, 7));
     }
 
     @org.junit.Test
     public void test3() {
-        Assert.assertEquals("1", FizzBuzz.isFizzBuzz(1, 3, 5));
+        Assert.assertEquals("BuzzWhizz", FizzBuzz.isFizzBuzz(1, 3, 5,7));
     }
 
     @org.junit.Test
     public void test4() {
-        Assert.assertEquals("FizzBuzz", FizzBuzz.isFizzBuzz(0, 3, 5));
+        Assert.assertEquals("Fizz", FizzBuzz.isFizzBuzz(0, 3, 5,7));
     }
 
     @org.junit.Test
     public void test5() {
-        Assert.assertEquals("11", FizzBuzz.isFizzBuzz(11, 3, 5));
+        Assert.assertEquals("Buzz", FizzBuzz.isFizzBuzz(11, 3, 5,7));
+    }
+
+    @org.junit.Test
+    public void test6() {
+        Assert.assertEquals("Whizz", FizzBuzz.isFizzBuzz(11, 3, 5,7));
+    }
+
+    @org.junit.Test
+    public void test7() {
+        Assert.assertEquals("invalid input", FizzBuzz.isFizzBuzz(0, 3, 5,7));
     }
 }

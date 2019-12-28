@@ -2,21 +2,34 @@ public class FizzBuzz {
 
     public static String FIZZ = "Fizz";
     public static String BUZZ = "Buzz";
-    public static String FIZZBUZZ = "FizzBuzz";
+    public static String WHIZZ = "Whizz";
 
-    public static String isFizzBuzz(int inputNum, int firstNum, int secondNum) {
-        if ( inputNum % firstNum == 0 && inputNum % secondNum ==0 ) {
-            return FIZZBUZZ;
+    public static String isFizzBuzz(int inputNum, int firstNum, int secondNum, int thirdNum) {
+
+        String resStr = "";
+
+        if ( inputNum <= 0 ) {
+            throw new NumberFormatException("invalid input");
         }
-        else if ( inputNum % firstNum == 0 ) {
-            return FIZZ;
+
+        if ( inputNum % firstNum ==0 ) {
+            resStr += FIZZ;
         }
-        else if ( inputNum % secondNum ==0 ) {
-            return BUZZ;
+
+        if ( inputNum % secondNum ==0 ) {
+            resStr += BUZZ;
         }
-        else {
+
+        if ( inputNum % thirdNum ==0 ) {
+            resStr += WHIZZ;
+        }
+
+        if ( resStr.length() == 0 ) {
             return "" + inputNum;
         }
+
+        return resStr;
+
     }
 
 }
