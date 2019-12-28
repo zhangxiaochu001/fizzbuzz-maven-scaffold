@@ -1,23 +1,22 @@
 public class FizzBuzz {
 
-    public static void main(String[] args) {
+    public static String FIZZ = "Fizz";
+    public static String BUZZ = "Buzz";
+    public static String FIZZBUZZ = "FizzBuzz";
 
-        for (int i=1; i<=100; i++) {
-            if ( i%3 == 0 && i%5 ==0 ) {
-                System.out.println("FizzBuzz");
-                continue;
-            }
-            if ( i%3 == 0 ) {
-                System.out.println("Fizz");
-                continue;
-            }
-            if ( i%5 == 0 ) {
-                System.out.println("Buzz");
-                continue;
-            }
-            System.out.println(i);
+    public static String isFizzBuzz(int inputNum, int firstNum, int secondNum) {
+        if ( inputNum % firstNum == 0 && inputNum % secondNum ==0 ) {
+            return FIZZBUZZ;
         }
-
+        else if ( inputNum % firstNum == 0 ) {
+            return FIZZ;
+        }
+        else if ( inputNum % secondNum ==0 ) {
+            return BUZZ;
+        }
+        else {
+            return "" + inputNum;
+        }
     }
 
 }
